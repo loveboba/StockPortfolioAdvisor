@@ -23,9 +23,11 @@ def test_function():
 # Function to get JSON file to backend 
 @my_application.post("/json")
 async def uploadJSON(theJSONfile: UploadFile = File(...)):
-    # check file is JSON file; TODO: check file type in backend or frontend decide 
+    # check file is JSON file; TODO: check file type in backend or frontend decide, make sure JSOn correct structure 
     if theJSONfile.content_type != "application/json": 
         return {"working_or_not": "Not a JSON file!"}
     else: 
+        # PARSE JSON DATA - hash map/dict or array; create object 
+        
         return {"working_or_not": "Good job!"}
 
