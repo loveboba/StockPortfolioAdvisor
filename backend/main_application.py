@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi import File, UploadFile 
 from fastapi.middleware.cors import CORSMiddleware 
+# stock newsletter stuff 
+from getting_response import the_newsletter
 
 my_application = FastAPI()
 
@@ -30,4 +32,9 @@ async def uploadJSON(theJSONfile: UploadFile = File(...)):
         # PARSE JSON DATA - hash map/dict or array; create object 
         
         return {"working_or_not": "Good job!"}
+
+# Function to get stock newsletter and send to the frontend
+@my_application.get("/stockNewsletter")
+def sendNewsletter(): 
+    return {"the_newsletter": the_newsletter}
 

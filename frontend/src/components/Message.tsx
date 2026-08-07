@@ -19,7 +19,7 @@ function Message() {
       .catch((error) => {
         console.error("Error: ", error);
       });
-  });
+  }, []);
   return the_message;
 }
 

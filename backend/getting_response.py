@@ -8,7 +8,9 @@ the_ai = genai.Client()
 
 response = the_ai.interactions.create(
     model="gemini-3.6-flash", 
-    input="What is the difference between rasmalai and rasgulla in less than 50 words?"
+    input="In 300 words or less, give overview of stock market today."
 )
+
+the_newsletter = response.output_text
 
 print(response.output_text)
