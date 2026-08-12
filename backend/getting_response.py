@@ -4,13 +4,18 @@ from dotenv import load_dotenv
 # get the .env variable 
 load_dotenv()
 
-the_ai = genai.Client()
+# connect to database 
 
-response = the_ai.interactions.create(
-    model="gemini-3.6-flash", 
-    input="In 300 words or less, give overview of stock market today."
-)
 
-the_newsletter = response.output_text
+# the_ai = genai.Client()
 
-print(response.output_text)
+# response = the_ai.interactions.create(
+#     model="gemini-3.6-flash", 
+#     input="In 300 words or less, give overview of stock market today."
+# )
+
+# change back later 
+# the_newsletter = response.output_text
+the_newsletter = "basic"; 
+
+# print(response.output_text)

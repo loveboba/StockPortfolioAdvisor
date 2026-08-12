@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
+import Graph, { type individualStock, type wholeGraph } from "./Graph";
 
 function JSONbox() {
   // save the JSON file
   const [the_file, set_the_file] = useState<File | null>(null);
+  // for graph
+  const [file_for_graph, set_graph] = useState<wholeGraph["stock_name"]>([]);
+  // let file_for_graph;
 
   // set the file after event
   const setFile = (file_event: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,8 +43,13 @@ function JSONbox() {
       body: to_the_backend,
     })
       .then((the_response) => the_response.json())
-      .then((json_response) => alert(json_response.working_or_not))
-      .catch((error) => {
+      //.then((json_response) => alert(json_response.working_or_not))
+      .then((json_response) => {
+        console.log(json_response);
+        console.log("Above is the json_response");
+        set_graph(json_response.json_file.stock);
+      }) // alert(json_response.json_file))
+      .catch((error: unknown) => {
         console.error("Error", error);
       });
   };
@@ -53,6 +62,7 @@ function JSONbox() {
         onChange={setFile}
       ></input>{" "}
       <button onClick={sendBackend}>Click to upload your file!</button>
+      <Graph stock_name={file_for_graph}></Graph>
     </div>
   );
 }

@@ -3,6 +3,8 @@ from fastapi import File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware 
 # stock newsletter stuff 
 from getting_response import the_newsletter
+# parsing json file 
+import json 
 
 my_application = FastAPI()
 
@@ -30,8 +32,24 @@ async def uploadJSON(theJSONfile: UploadFile = File(...)):
         return {"working_or_not": "Not a JSON file!"}
     else: 
         # PARSE JSON DATA - hash map/dict or array; create object 
-        
-        return {"working_or_not": "Good job!"}
+
+        the_readable_file = json.load(theJSONfile.file) 
+
+        # parse through the readable file - name of sectors, quantity in each sector - COST , total cost of the stocks 
+
+
+
+        # print(the_readable_file)
+
+        # GET THE DATA and return it 
+
+        return {"json_file": the_readable_file, "working_or_not": "Good job!"}
+        # return {"working_or_not": "Good job!"}
+
+# Function to get graph data and send it to frontend 
+@my_application.get("/graph")
+def sendGraphInfo(): 
+    return ""
 
 # Function to get stock newsletter and send to the frontend
 @my_application.get("/stockNewsletter")
