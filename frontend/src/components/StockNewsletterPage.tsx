@@ -17,7 +17,7 @@ function StockNewsletterPage() {
       });
   }, []);
 
-  return the_newsletter;
+  return <div className="newsletterPage">the_newsletter</div>;
 }
 
 export default StockNewsletterPage;

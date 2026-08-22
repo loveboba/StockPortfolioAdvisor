@@ -4,7 +4,7 @@ import Graph from "./Graph";
 
 function FileUploadPage() {
   return (
-    <div>
+    <div className="fileUploadPage">
       <Message></Message>
       <JSONbox></JSONbox>
       {/* <Graph></Graph> */}

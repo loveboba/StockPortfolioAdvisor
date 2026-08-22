@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function NavigationBar() {
   return (
-    <nav className="navbar-nav">
+    <nav className="navbar fixed top">
       <ul className="nav-item">
         <li>
           <Link to="/" className="nav-link">

@@ -9,16 +9,16 @@
 
 body {
     /* background: var(--background_color);  */
-    background: ivory;
+    background: lightslategray;
     color: var(--text_color); 
     margin: 0; 
 }
 
 .navbar-nav {
-    /* display: flex; 
+    display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    position: fixed;  */
+    /* position: fixed;  */
     top: 0; 
     width: 100%; 
 
@@ -35,4 +35,23 @@ body {
 .nav-link {
     color: white;
     font-weight: bold;
+}
+
+.homePage {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.fileUploadPage {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+
+}
+
+.newsletterPage {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
 }
