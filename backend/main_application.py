@@ -36,6 +36,7 @@ async def uploadJSON(theJSONfile: UploadFile = File(...)):
         the_readable_file = json.load(theJSONfile.file) 
 
         # parse through the readable file - name of sectors, quantity in each sector - COST , total cost of the stocks 
+        
 
 
 

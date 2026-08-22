@@ -2,20 +2,28 @@ import { Link } from "react-router-dom";
 
 function NavigationBar() {
   return (
-    <nav>
-      <ul>
+    <nav className="navbar-nav">
+      <ul className="nav-item">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className="nav-link">
+            Home
+          </Link>
         </li>
         <li>
           {" "}
-          <Link to="/fileUpload">Upload Stocks as File</Link>
+          <Link to="/fileUpload" className="nav-link">
+            Upload Stocks as File
+          </Link>
         </li>
         <li>
-          <Link to="/manualUpload">Add Stocks Manually</Link>
+          <Link to="/manualUpload" className="nav-link">
+            Add Stocks Manually
+          </Link>
         </li>
         <li>
-          <Link to="/stockNewsletter">Stock Newsletter</Link>
+          <Link to="/stockNewsletter" className="nav-link">
+            Stock Newsletter
+          </Link>
         </li>
       </ul>
     </nav>
