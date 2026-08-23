@@ -7,11 +7,14 @@ import HomePage from "./components/HomePage";
 import FileUploadPage from "./components/FileUploadPage";
 import ManualUploadPage from "./components/ManualUploadPage";
 
+// import styling
+import "./App.css";
+
 function App() {
   return (
     <BrowserRouter>
       <div>
-        <div
+        {/* <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -19,27 +22,27 @@ function App() {
             alignItems: "center",
             gap: "40px",
           }} // fix the styling of the page and move to correct place
-        >
-          <NavigationBar></NavigationBar>
-          {/* <Message></Message>
+        > */}
+        <NavigationBar></NavigationBar>
+        {/* <Message></Message>
           <JSONbox></JSONbox> */}
-          <Routes>
-            <Route path="/" element={<HomePage></HomePage>}></Route>
-            <Route
-              path="/stockNewsletter"
-              element={<StockNewsletterPage></StockNewsletterPage>}
-            ></Route>
-            <Route
-              path="/fileUpload"
-              element={<FileUploadPage></FileUploadPage>}
-            ></Route>
-            <Route
-              path="/manualUpload"
-              element={<ManualUploadPage></ManualUploadPage>}
-            ></Route>
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<HomePage></HomePage>}></Route>
+          <Route
+            path="/stockNewsletter"
+            element={<StockNewsletterPage></StockNewsletterPage>}
+          ></Route>
+          <Route
+            path="/fileUpload"
+            element={<FileUploadPage></FileUploadPage>}
+          ></Route>
+          <Route
+            path="/manualUpload"
+            element={<ManualUploadPage></ManualUploadPage>}
+          ></Route>
+        </Routes>
       </div>
+      {/* </div> */}
     </BrowserRouter>
   );
 }
