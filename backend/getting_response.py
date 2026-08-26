@@ -5,10 +5,9 @@ import os
 from datetime import date 
 
 # import sqlalchemy
-import psycopg2 
 
 
-from sqlalchemy import create_engine, text, connectors
+from sqlalchemy import create_engine, text
 
 # get the .env variable 
 load_dotenv()
@@ -85,7 +84,7 @@ else:
 
 # the_newsletter = "this is printing"
 
-print(the_newsletter)
+# print(the_newsletter)
 
 
 
