@@ -10,13 +10,6 @@ export type wholeGraph = {
 };
 
 function Graph({ stock_name }: wholeGraph) {
-  // const other_graph = {
-  //   stock: [
-  //     { stock_name: "AAPL", quantity: 15 },
-
-  //     { stock_name: "GOOGL", quantity: 10 },
-  //   ],
-  // };
   const new_data = stock_name; // ?? other_graph;
 
   return (
