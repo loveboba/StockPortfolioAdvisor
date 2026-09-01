@@ -18,13 +18,6 @@ export type wholeGraph = {
 function Graph({ stock_name }: wholeGraph) {
   // let new_data = {};
 
-  const other_graphok = {
-    stock: [
-      { stock_name: "AAPL", quantity: 15 },
-
-      { stock_name: "GOOGL", quantity: 10 },
-    ],
-  };
   const other_graph = {
     stock: [
       { stock_name: "AAPL", quantity: 15 },
@@ -33,23 +26,6 @@ function Graph({ stock_name }: wholeGraph) {
     ],
   };
   const new_data = stock_name ?? other_graph;
-
-  // if (json_graph == undefined) {
-  //   let new_data = {
-  //     stock: [
-  //       { stock_name: "AAPL", quantity: 5 },
-
-  //       { stock_name: "GOOGL", quantity: 10 },
-  //     ],
-  //   };
-  // } else {
-  //   let new_data = json_graph as wholeGraph;
-  // }
-
-  // const pie_chart_data = [
-  //   { stock_name: "GOOGL", quantity: 5 },
-  //   { stock_name: "AAPL", quantity: 10 },
-  // ];
 
   return (
     <div>

@@ -57,7 +57,7 @@ async def uploadJSON(theJSONfile: UploadFile = File(...)):
 
         # stock money dictionary
 
-        money_dictionary = {stock: []}
+        # money_dictionary = {stock: []}
 
         # for risk stuff 
         list_of_stocks = the_readable_file["stock"]
