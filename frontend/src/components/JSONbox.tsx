@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import Graph, { type individualStock, type wholeGraph } from "./Graph";
+import { useState } from "react";
+import Graph, { type wholeGraph } from "./Graph";
 
 function JSONbox() {
   // save the JSON file
@@ -24,9 +24,7 @@ function JSONbox() {
     }
   };
   // send the file to the backend
-  const sendBackend = async (
-    upload_event: React.MouseEvent<HTMLButtonElement>,
-  ) => {
+  const sendBackend = async (_: React.MouseEvent<HTMLButtonElement>) => {
     // verify file exists
     if (!the_file) {
       alert("You didn't upload anything!");

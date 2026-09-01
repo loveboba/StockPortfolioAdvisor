@@ -1,4 +1,4 @@
-FROM node:26-alpine AS firstStep 
+FROM node:22-alpine AS firstStep 
 
 WORKDIR /frontend 
 
@@ -11,7 +11,7 @@ RUN npm run build
 
 FROM nginx:alpine
 
-COPY --from=build /frontend/dist /usr/share/nginx/html 
+COPY --from=firstStep /frontend/dist /usr/share/nginx/html 
 
 EXPOSE 80 
 

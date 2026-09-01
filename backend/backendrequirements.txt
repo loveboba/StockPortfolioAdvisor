@@ -4,3 +4,5 @@ sqlalchemy
 python-dotenv 
 yfinance
 google-genai
+psycopg2-binary
+python-multipart
