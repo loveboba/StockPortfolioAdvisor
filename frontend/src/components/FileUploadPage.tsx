@@ -1,6 +1,7 @@
 import JSONbox from "./JSONbox";
 import Message from "./Message";
 import Graph from "./Graph";
+import AskAI from "./AskAI";
 
 function FileUploadPage() {
   return (
@@ -8,6 +9,7 @@ function FileUploadPage() {
       <Message></Message>
       <JSONbox></JSONbox>
       {/* <Graph></Graph> */}
+      {/* <AskAI></AskAI> */}
     </div>
   );
 }

@@ -9,7 +9,7 @@
 
 body {
     /* background: var(--background_color);  */
-    background: lightslategray;
+    background: rgb(16, 209, 106);
     color: var(--text_color); 
     margin: 0; 
 }
