@@ -1,5 +1,9 @@
 import { useState } from "react";
 import Graph, { type wholeGraph } from "./Graph";
+import GraphMoney from "./GraphMoney";
+import GraphRisk, { type riskwholeGraph } from "./GraphRisk";
+import GraphSector from "./GraphSector";
+import AskAI from "./AskAI";
 
 function JSONbox() {
   // save the JSON file
@@ -7,6 +11,11 @@ function JSONbox() {
   // for graph
   const [file_for_graph, set_graph] = useState<wholeGraph["stock_name"]>([]);
   // let file_for_graph;
+
+  // risk graph
+  const [risk_graph, set_risk_graph] = useState<
+    riskwholeGraph["other_risk_stuff"]
+  >({ low_risk: 0, average_risk: 0, high_risk: 0 });
 
   // set the file after event
   const setFile = (file_event: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,6 +55,8 @@ function JSONbox() {
         console.log(json_response);
         console.log("Above is the json_response");
         set_graph(json_response.json_file.stock);
+        // RISK GRAPH
+        set_risk_graph(json_response.risk_file);
       }) // alert(json_response.json_file))
       .catch((error: unknown) => {
         console.error("Error", error);
@@ -61,6 +72,10 @@ function JSONbox() {
       ></input>{" "}
       <button onClick={sendBackend}>Click to upload your file!</button>
       <Graph stock_name={file_for_graph}></Graph>
+      <GraphMoney stock_name={file_for_graph}></GraphMoney>
+      <GraphRisk other_risk_stuff={risk_graph}></GraphRisk>
+      <GraphSector stock_name={file_for_graph}></GraphSector>
+      <AskAI></AskAI>
     </div>
   );
 }

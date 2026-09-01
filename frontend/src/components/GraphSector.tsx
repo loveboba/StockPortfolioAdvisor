@@ -9,19 +9,12 @@ export type wholeGraph = {
   stock_name: individualStock[];
 };
 
-function Graph({ stock_name }: wholeGraph) {
-  // const other_graph = {
-  //   stock: [
-  //     { stock_name: "AAPL", quantity: 15 },
-
-  //     { stock_name: "GOOGL", quantity: 10 },
-  //   ],
-  // };
-  const new_data = stock_name; // ?? other_graph;
+function GraphSector({ stock_name }: wholeGraph) {
+  const new_data = stock_name;
 
   return (
     <div>
-      <h1>Overall Stock Graph</h1>
+      <h1>Stock Sectors</h1>
       <PieChart height={200} width={200}>
         <Pie data={new_data} dataKey="quantity" nameKey="stock_name"></Pie>
         <Legend></Legend>
@@ -31,4 +24,4 @@ function Graph({ stock_name }: wholeGraph) {
   );
 }
 
-export default Graph;
+export default GraphSector;
