@@ -1,5 +1,8 @@
 # MyApplication
 
+<img width="1675" height="301" alt="image" src="https://github.com/user-attachments/assets/664673eb-c26f-49b4-80b2-19b52c9d6119" />
+
+
 Hello! This stock portfolio advisor is for beginners to the stock market. 
 Please feel free to download the testing.json file to test out the stock portfolio advisor. 
 
