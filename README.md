@@ -7,7 +7,6 @@
 
 
 Hello! This stock portfolio advisor is for beginners to the stock market. 
-Please feel free to download the testing.json file to test out the stock portfolio advisor. 
 
 NOTE: JSON file should be uploaded in this format for results: 
 
